@@ -1,0 +1,18 @@
+MID:MA(CLOSE,N);
+UB:MID+2*STD(CLOSE,N);
+LB:MID+2*STD(CLOSE,N);
+MA5:MA(CLOSE,5),COLORWHITE;
+MA18:MA(CLOSE,18),COLORGRAY;
+MA31:MA(CLOSE,31),COLORBLUE;
+
+--------------------------------------------
+30分钟18ma布林
+1.Ctrl+F调出公式管理器
+2.选择路径型，新建公式，先起个名字，我起的名字是“boll自编”
+3.把下面的公式copy进空白处
+	MID:MA(CLOSE,N);
+	UPPER:MID+2*STD(CLOSE,N);
+	LOWER:MID-2*STD(CLOSE,N);
+	MA18:MA(C,18);
+参数改为41，划线方法改为主图叠加，测试通过后，确定！
+3.到30分K线界面，敲入公式名字，回车，OK!
